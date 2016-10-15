@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E8DAEF5E1DB28FEC003128DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DAEF5D1DB28FEC003128DD /* AppDelegate.swift */; };
+		E8DAEF651DB28FEC003128DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8DAEF641DB28FEC003128DD /* Assets.xcassets */; };
+		E8DAEF681DB28FEC003128DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8DAEF661DB28FEC003128DD /* LaunchScreen.storyboard */; };
+		E8DAEF731DB28FEC003128DD /* TechLabTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DAEF721DB28FEC003128DD /* TechLabTableViewControllerTests.swift */; };
+		E8DAEF7E1DB28FEC003128DD /* TechLabTableViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DAEF7D1DB28FEC003128DD /* TechLabTableViewControllerUITests.swift */; };
+		E8DAEF8E1DB29022003128DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8DAEF8B1DB29022003128DD /* Main.storyboard */; };
+		E8DAEF8F1DB29022003128DD /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DAEF8C1DB29022003128DD /* TableViewCell.swift */; };
+		E8DAEF901DB29022003128DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DAEF8D1DB29022003128DD /* ViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E8DAEF6F1DB28FEC003128DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8DAEF521DB28FEC003128DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8DAEF591DB28FEC003128DD;
+			remoteInfo = TechLabTableViewController;
+		};
+		E8DAEF7A1DB28FEC003128DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8DAEF521DB28FEC003128DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8DAEF591DB28FEC003128DD;
+			remoteInfo = TechLabTableViewController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E8DAEF5A1DB28FEC003128DD /* TechLabTableViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechLabTableViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8DAEF5D1DB28FEC003128DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E8DAEF641DB28FEC003128DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E8DAEF671DB28FEC003128DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E8DAEF691DB28FEC003128DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8DAEF6E1DB28FEC003128DD /* TechLabTableViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TechLabTableViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8DAEF721DB28FEC003128DD /* TechLabTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechLabTableViewControllerTests.swift; sourceTree = "<group>"; };
+		E8DAEF741DB28FEC003128DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8DAEF791DB28FEC003128DD /* TechLabTableViewControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TechLabTableViewControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8DAEF7D1DB28FEC003128DD /* TechLabTableViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechLabTableViewControllerUITests.swift; sourceTree = "<group>"; };
+		E8DAEF7F1DB28FEC003128DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8DAEF8B1DB29022003128DD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E8DAEF8C1DB29022003128DD /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		E8DAEF8D1DB29022003128DD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E8DAEF571DB28FEC003128DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8DAEF6B1DB28FEC003128DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8DAEF761DB28FEC003128DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E8DAEF511DB28FEC003128DD = {
+			isa = PBXGroup;
+			children = (
+				E8DAEF5C1DB28FEC003128DD /* TechLabTableViewController */,
+				E8DAEF711DB28FEC003128DD /* TechLabTableViewControllerTests */,
+				E8DAEF7C1DB28FEC003128DD /* TechLabTableViewControllerUITests */,
+				E8DAEF5B1DB28FEC003128DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E8DAEF5B1DB28FEC003128DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E8DAEF5A1DB28FEC003128DD /* TechLabTableViewController.app */,
+				E8DAEF6E1DB28FEC003128DD /* TechLabTableViewControllerTests.xctest */,
+				E8DAEF791DB28FEC003128DD /* TechLabTableViewControllerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E8DAEF5C1DB28FEC003128DD /* TechLabTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E8DAEF5D1DB28FEC003128DD /* AppDelegate.swift */,
+				E8DAEF8B1DB29022003128DD /* Main.storyboard */,
+				E8DAEF8C1DB29022003128DD /* TableViewCell.swift */,
+				E8DAEF8D1DB29022003128DD /* ViewController.swift */,
+				E8DAEF641DB28FEC003128DD /* Assets.xcassets */,
+				E8DAEF661DB28FEC003128DD /* LaunchScreen.storyboard */,
+				E8DAEF691DB28FEC003128DD /* Info.plist */,
+			);
+			path = TechLabTableViewController;
+			sourceTree = "<group>";
+		};
+		E8DAEF711DB28FEC003128DD /* TechLabTableViewControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				E8DAEF721DB28FEC003128DD /* TechLabTableViewControllerTests.swift */,
+				E8DAEF741DB28FEC003128DD /* Info.plist */,
+			);
+			path = TechLabTableViewControllerTests;
+			sourceTree = "<group>";
+		};
+		E8DAEF7C1DB28FEC003128DD /* TechLabTableViewControllerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E8DAEF7D1DB28FEC003128DD /* TechLabTableViewControllerUITests.swift */,
+				E8DAEF7F1DB28FEC003128DD /* Info.plist */,
+			);
+			path = TechLabTableViewControllerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E8DAEF591DB28FEC003128DD /* TechLabTableViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8DAEF821DB28FEC003128DD /* Build configuration list for PBXNativeTarget "TechLabTableViewController" */;
+			buildPhases = (
+				E8DAEF561DB28FEC003128DD /* Sources */,
+				E8DAEF571DB28FEC003128DD /* Frameworks */,
+				E8DAEF581DB28FEC003128DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TechLabTableViewController;
+			productName = TechLabTableViewController;
+			productReference = E8DAEF5A1DB28FEC003128DD /* TechLabTableViewController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E8DAEF6D1DB28FEC003128DD /* TechLabTableViewControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8DAEF851DB28FEC003128DD /* Build configuration list for PBXNativeTarget "TechLabTableViewControllerTests" */;
+			buildPhases = (
+				E8DAEF6A1DB28FEC003128DD /* Sources */,
+				E8DAEF6B1DB28FEC003128DD /* Frameworks */,
+				E8DAEF6C1DB28FEC003128DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E8DAEF701DB28FEC003128DD /* PBXTargetDependency */,
+			);
+			name = TechLabTableViewControllerTests;
+			productName = TechLabTableViewControllerTests;
+			productReference = E8DAEF6E1DB28FEC003128DD /* TechLabTableViewControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E8DAEF781DB28FEC003128DD /* TechLabTableViewControllerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8DAEF881DB28FEC003128DD /* Build configuration list for PBXNativeTarget "TechLabTableViewControllerUITests" */;
+			buildPhases = (
+				E8DAEF751DB28FEC003128DD /* Sources */,
+				E8DAEF761DB28FEC003128DD /* Frameworks */,
+				E8DAEF771DB28FEC003128DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E8DAEF7B1DB28FEC003128DD /* PBXTargetDependency */,
+			);
+			name = TechLabTableViewControllerUITests;
+			productName = TechLabTableViewControllerUITests;
+			productReference = E8DAEF791DB28FEC003128DD /* TechLabTableViewControllerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E8DAEF521DB28FEC003128DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = techlab;
+				TargetAttributes = {
+					E8DAEF591DB28FEC003128DD = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 5VKVMM2MH8;
+						ProvisioningStyle = Automatic;
+					};
+					E8DAEF6D1DB28FEC003128DD = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 5VKVMM2MH8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E8DAEF591DB28FEC003128DD;
+					};
+					E8DAEF781DB28FEC003128DD = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 5VKVMM2MH8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E8DAEF591DB28FEC003128DD;
+					};
+				};
+			};
+			buildConfigurationList = E8DAEF551DB28FEC003128DD /* Build configuration list for PBXProject "TechLabTableViewController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E8DAEF511DB28FEC003128DD;
+			productRefGroup = E8DAEF5B1DB28FEC003128DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E8DAEF591DB28FEC003128DD /* TechLabTableViewController */,
+				E8DAEF6D1DB28FEC003128DD /* TechLabTableViewControllerTests */,
+				E8DAEF781DB28FEC003128DD /* TechLabTableViewControllerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E8DAEF581DB28FEC003128DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8DAEF8E1DB29022003128DD /* Main.storyboard in Resources */,
+				E8DAEF681DB28FEC003128DD /* LaunchScreen.storyboard in Resources */,
+				E8DAEF651DB28FEC003128DD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8DAEF6C1DB28FEC003128DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8DAEF771DB28FEC003128DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E8DAEF561DB28FEC003128DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8DAEF901DB29022003128DD /* ViewController.swift in Sources */,
+				E8DAEF5E1DB28FEC003128DD /* AppDelegate.swift in Sources */,
+				E8DAEF8F1DB29022003128DD /* TableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8DAEF6A1DB28FEC003128DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8DAEF731DB28FEC003128DD /* TechLabTableViewControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8DAEF751DB28FEC003128DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8DAEF7E1DB28FEC003128DD /* TechLabTableViewControllerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E8DAEF701DB28FEC003128DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8DAEF591DB28FEC003128DD /* TechLabTableViewController */;
+			targetProxy = E8DAEF6F1DB28FEC003128DD /* PBXContainerItemProxy */;
+		};
+		E8DAEF7B1DB28FEC003128DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8DAEF591DB28FEC003128DD /* TechLabTableViewController */;
+			targetProxy = E8DAEF7A1DB28FEC003128DD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E8DAEF661DB28FEC003128DD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E8DAEF671DB28FEC003128DD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E8DAEF801DB28FEC003128DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E8DAEF811DB28FEC003128DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E8DAEF831DB28FEC003128DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5VKVMM2MH8;
+				INFOPLIST_FILE = TechLabTableViewController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.nachos.TechLabTableViewController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E8DAEF841DB28FEC003128DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5VKVMM2MH8;
+				INFOPLIST_FILE = TechLabTableViewController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.nachos.TechLabTableViewController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E8DAEF861DB28FEC003128DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5VKVMM2MH8;
+				INFOPLIST_FILE = TechLabTableViewControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.nachos.TechLabTableViewControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TechLabTableViewController.app/TechLabTableViewController";
+			};
+			name = Debug;
+		};
+		E8DAEF871DB28FEC003128DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5VKVMM2MH8;
+				INFOPLIST_FILE = TechLabTableViewControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.nachos.TechLabTableViewControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TechLabTableViewController.app/TechLabTableViewController";
+			};
+			name = Release;
+		};
+		E8DAEF891DB28FEC003128DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 5VKVMM2MH8;
+				INFOPLIST_FILE = TechLabTableViewControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.nachos.TechLabTableViewControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = TechLabTableViewController;
+			};
+			name = Debug;
+		};
+		E8DAEF8A1DB28FEC003128DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 5VKVMM2MH8;
+				INFOPLIST_FILE = TechLabTableViewControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.nachos.TechLabTableViewControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = TechLabTableViewController;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E8DAEF551DB28FEC003128DD /* Build configuration list for PBXProject "TechLabTableViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8DAEF801DB28FEC003128DD /* Debug */,
+				E8DAEF811DB28FEC003128DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8DAEF821DB28FEC003128DD /* Build configuration list for PBXNativeTarget "TechLabTableViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8DAEF831DB28FEC003128DD /* Debug */,
+				E8DAEF841DB28FEC003128DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E8DAEF851DB28FEC003128DD /* Build configuration list for PBXNativeTarget "TechLabTableViewControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8DAEF861DB28FEC003128DD /* Debug */,
+				E8DAEF871DB28FEC003128DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E8DAEF881DB28FEC003128DD /* Build configuration list for PBXNativeTarget "TechLabTableViewControllerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8DAEF891DB28FEC003128DD /* Debug */,
+				E8DAEF8A1DB28FEC003128DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E8DAEF521DB28FEC003128DD /* Project object */;
+}
