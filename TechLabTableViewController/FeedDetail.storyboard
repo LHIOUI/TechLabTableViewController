@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="Qn6-zH-O72">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Feed Detail View Controller-->
+        <scene sceneID="bS1-lo-i8B">
+            <objects>
+                <viewController id="Qn6-zH-O72" customClass="FeedDetailViewController" customModule="TechLabTableViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cbm-4A-6vc"/>
+                        <viewControllerLayoutGuide type="bottom" id="FLE-0f-xfW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aPx-Ua-Tye">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qMn-Le-Tmi">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" red="0.1730576753616333" green="0.38335499167442322" blue="0.50032037496566772" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="basicCell" id="boH-zs-ehk" customClass="TableViewCell" customModule="TechLabTableViewController" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="boH-zs-ehk" id="Os0-Qk-LRf">
+                                            <frame key="frameInset" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovC-1K-IPW">
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                    <color key="textColor" red="0.62797915935516357" green="0.042109616100788116" blue="0.05869259312748909" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ovC-1K-IPW" firstAttribute="leading" secondItem="Os0-Qk-LRf" secondAttribute="leadingMargin" id="1m0-o7-i4M"/>
+                                                <constraint firstItem="ovC-1K-IPW" firstAttribute="centerY" secondItem="Os0-Qk-LRf" secondAttribute="centerY" id="eSW-0x-l3r"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelTitle" destination="ovC-1K-IPW" id="ky9-ue-f4m"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GJ6-CJ-xLc">
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="onDrag" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="XWB-gW-q12">
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="740" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQu-VW-wOa">
+                                        <state key="normal" title="Répondre"/>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendItWithSender:" destination="Qn6-zH-O72" eventType="touchUpInside" id="W6B-yQ-9ak"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="0SH-Ib-ZdC"/>
+                                    <constraint firstAttribute="bottom" secondItem="sQu-VW-wOa" secondAttribute="bottom" constant="6" id="2pO-Oy-2rB"/>
+                                    <constraint firstAttribute="trailing" secondItem="sQu-VW-wOa" secondAttribute="trailing" constant="10" id="Eni-Dq-HDF"/>
+                                    <constraint firstItem="XWB-gW-q12" firstAttribute="leading" secondItem="GJ6-CJ-xLc" secondAttribute="leading" constant="5" id="HTQ-uN-nf1"/>
+                                    <constraint firstAttribute="bottom" secondItem="XWB-gW-q12" secondAttribute="bottom" constant="5" id="cFy-mn-fpn"/>
+                                    <constraint firstItem="sQu-VW-wOa" firstAttribute="leading" secondItem="XWB-gW-q12" secondAttribute="trailing" constant="10" id="pKi-uJ-X0h"/>
+                                    <constraint firstItem="XWB-gW-q12" firstAttribute="top" secondItem="GJ6-CJ-xLc" secondAttribute="top" constant="5" id="vG4-PU-J3i"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="GJ6-CJ-xLc" firstAttribute="top" secondItem="qMn-Le-Tmi" secondAttribute="bottom" id="8sg-o1-SBC"/>
+                            <constraint firstAttribute="trailing" secondItem="GJ6-CJ-xLc" secondAttribute="trailing" id="OXs-vU-0Rc"/>
+                            <constraint firstItem="FLE-0f-xfW" firstAttribute="top" secondItem="GJ6-CJ-xLc" secondAttribute="bottom" id="T0H-aY-GdN"/>
+                            <constraint firstItem="qMn-Le-Tmi" firstAttribute="top" secondItem="cbm-4A-6vc" secondAttribute="bottom" id="Y16-NK-Cks"/>
+                            <constraint firstItem="GJ6-CJ-xLc" firstAttribute="leading" secondItem="aPx-Ua-Tye" secondAttribute="leading" id="cvc-jC-ia3"/>
+                            <constraint firstItem="qMn-Le-Tmi" firstAttribute="leading" secondItem="aPx-Ua-Tye" secondAttribute="leading" id="qQv-kY-Zio"/>
+                            <constraint firstAttribute="trailing" secondItem="qMn-Le-Tmi" secondAttribute="trailing" id="xkj-81-aVq"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="inputBarBottomConstraint" destination="T0H-aY-GdN" id="jbg-Xg-ca8"/>
+                        <outlet property="inputTextHeightConstraint" destination="0SH-Ib-ZdC" id="JWo-n7-6Nx"/>
+                        <outlet property="sendButton" destination="sQu-VW-wOa" id="hPP-lh-WNa"/>
+                        <outlet property="tableView" destination="qMn-Le-Tmi" id="Bbd-ZN-iIN"/>
+                        <outlet property="textField" destination="XWB-gW-q12" id="yX3-q5-rnj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="70h-nf-CQg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="ckA-C6-U6M">
+                    <connections>
+                        <action selector="panningTheScrollViewWithSender:" destination="Qn6-zH-O72" id="6oC-96-cHL"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-9.5" y="-1.5"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

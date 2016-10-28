@@ -8,15 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FeedDetailViewController: UIViewController {
+    
+    @IBOutlet weak var sendButton: UIButton!
+    
     let cellId = "basicCell"
-    @IBOutlet weak var scrollView: UIScrollView!
+    var keyboardHeight:CGFloat = 0.0
     @IBOutlet weak var textField: UITextView!
     @IBOutlet weak var tableView: UITableView!
     var placeholderLabel: UILabel!
     var initialContentSizeHeight : CGFloat = 0.0
     var initialConstantHeight : CGFloat = 0.0
-    var hasScrollToBottom = false
+    var isBottomReached = false
     var textFieldShouldBecomeFirstResponder = false
     @IBOutlet weak var inputBarBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var inputTextHeightConstraint: NSLayoutConstraint!
@@ -40,11 +43,7 @@ class ViewController: UIViewController {
         "18. Piqué (Barcelone) – €58m",
         "19. Agüero (M. City) – €58m",
         "20. John Terry (Chelsea) – €56m"]
-    deinit{
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIApplicationWillEnterForeground,object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIApplicationWillResignActive, object: nil)
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,17 +63,29 @@ class ViewController: UIViewController {
         placeholderLabel.frame.origin = CGPoint(x:5,y: textField.font!.pointSize / 2)
         placeholderLabel.textColor = UIColor(white: 0, alpha: 0.3)
         placeholderLabel.isHidden = !textField.text.isEmpty
-        
-        
-        
-        
-        
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.appWillEnterInForeground(notification:)), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.appDidBecomeActive(notification:)), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillChangeFrame(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
     }
-    
+    func deregisterFromNotifications(){
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardDidChangeFrame, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIApplicationWillResignActive,object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+    }
+    func registerForNotifications(){
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(FeedDetailViewController.appWillResignActive(notification:)), name: NSNotification.Name.UIApplicationWillResignActive, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(FeedDetailViewController.appDidBecomeActive(notification:)), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(FeedDetailViewController.keyBoardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(FeedDetailViewController.keyBoardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        registerForNotifications()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        deregisterFromNotifications()
+    }
     @IBAction func sendIt(sender: AnyObject) {
         
     }
@@ -84,7 +95,7 @@ class ViewController: UIViewController {
         }
        
     }
-    func appWillEnterInForeground(notification:NSNotification){
+    func appWillResignActive(notification:NSNotification){
         if(textField.isFirstResponder){
             textField.resignFirstResponder()
             textFieldShouldBecomeFirstResponder = true
@@ -95,36 +106,35 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func keyboardWillChangeFrame(notification:NSNotification){
-        //Calculate the keyboard size
-        let keyboardEndFrame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey]! as AnyObject).cgRectValue
-        let keyboardBeginFrame = (notification.userInfo![UIKeyboardFrameBeginUserInfoKey]! as AnyObject).cgRectValue
-        let animationCurve = UIViewAnimationOptions.init(rawValue: UInt((notification.userInfo![UIKeyboardAnimationCurveUserInfoKey]! as! NSNumber).uint32Value << 16))
-        let animationDuration = notification.userInfo![UIKeyboardAnimationDurationUserInfoKey]! as! Double
-        let delta = (keyboardBeginFrame?.origin.y)! - (keyboardEndFrame?.origin.y)!
-        // If user has not scrolled down to bottom, change the input bar bottom constraint
-        if(!self.hasScrollToBottom){
-            self.inputBarBottomConstraint.constant += delta
-        }else{
-            self.inputBarBottomConstraint.constant = 0
+    func keyBoardWillHide(notification:NSNotification){
+        inputBarBottomConstraint.constant = 0
+        tableView.setContentOffset(CGPoint.zero, animated: true)
+        UIView.animate(withDuration: 0.5) { () -> Void in
+                self.view.layoutIfNeeded()
         }
-        
-        
-        UIView.animate(withDuration: animationDuration, delay: 0, options: [animationCurve], animations: { () -> Void in
-            if(self.hasScrollToBottom && self.tableView.contentInset.top == 0 && delta > 0){
-                //Adjust the scrollView content offset to scroll up when key board appear
-                self.scrollView.contentOffset.y += delta
-                //Adjust the table view content inset to make rows scrolled up can scroll down
-                self.tableView.contentInset.top += delta
-            }else{
-                //Reset scroll view content offset and table view content inset when the keyboard is hiddn (delta < 0)
-                
-                self.scrollView.contentOffset.y = 0
-                self.tableView.contentInset.top = 0
+    }
+    func keyBoardWillShow(notification:NSNotification){
+        if let userInfo = notification.userInfo {
+            if let keyboardSize = (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+                keyboardHeight = keyboardSize.height
+                // ...
+            } else {
+                // no UIKeyboardFrameBeginUserInfoKey entry in userInfo
             }
-            self.view.layoutIfNeeded()
-            }, completion: nil)
+        } else {
+            // no userInfo dictionary in notification
+        }
+        inputBarBottomConstraint.constant = keyboardHeight
         
+        if(isBottomReached){
+            //Adjust the scrollView content offset to scroll up when key board appear
+            var currentContentOffset = tableView.contentOffset
+            currentContentOffset.y += keyboardHeight
+            tableView.setContentOffset(currentContentOffset, animated: true)
+        }
+        UIView.animate(withDuration: 0.5) { 
+            self.view.layoutIfNeeded()
+        }
     }
     
     @IBAction func panningTheScrollView(sender: AnyObject) {
@@ -132,14 +142,14 @@ class ViewController: UIViewController {
     }
     
 }
-extension ViewController : UITableViewDelegate{
+extension FeedDetailViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if(indexPath.row >= rows.count - 1){
-            hasScrollToBottom = true
+            isBottomReached = true
         }
     }
 }
-extension ViewController : UITableViewDataSource{
+extension FeedDetailViewController : UITableViewDataSource{
    
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! TableViewCell
@@ -155,9 +165,10 @@ extension ViewController : UITableViewDataSource{
         return rows.count
     }
 }
-extension ViewController : UITextViewDelegate{
+extension FeedDetailViewController : UITextViewDelegate{
     func textViewDidChange(_ textView: UITextView) {
         placeholderLabel.isHidden = !textView.text.isEmpty
+        sendButton.isEnabled = !textView.text.isEmpty
         if(initialContentSizeHeight == 0){
             initialContentSizeHeight = textView.contentSize.height
         }
@@ -174,7 +185,7 @@ extension ViewController : UITextViewDelegate{
         
         UIView.animate(withDuration: 0.3, animations: {
             
-            if(self.hasScrollToBottom){
+            if(self.isBottomReached){
                 //Adjust the tableView content y Offset to scroll up when the texview grow up or small down
                 self.tableView.contentOffset.y += delta
             }

@@ -12,9 +12,9 @@
 		E8DAEF681DB28FEC003128DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8DAEF661DB28FEC003128DD /* LaunchScreen.storyboard */; };
 		E8DAEF731DB28FEC003128DD /* TechLabTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DAEF721DB28FEC003128DD /* TechLabTableViewControllerTests.swift */; };
 		E8DAEF7E1DB28FEC003128DD /* TechLabTableViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DAEF7D1DB28FEC003128DD /* TechLabTableViewControllerUITests.swift */; };
-		E8DAEF8E1DB29022003128DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8DAEF8B1DB29022003128DD /* Main.storyboard */; };
+		E8DAEF8E1DB29022003128DD /* FeedDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8DAEF8B1DB29022003128DD /* FeedDetail.storyboard */; };
 		E8DAEF8F1DB29022003128DD /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DAEF8C1DB29022003128DD /* TableViewCell.swift */; };
-		E8DAEF901DB29022003128DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DAEF8D1DB29022003128DD /* ViewController.swift */; };
+		E8DAEF901DB29022003128DD /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DAEF8D1DB29022003128DD /* FeedDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,9 +46,9 @@
 		E8DAEF791DB28FEC003128DD /* TechLabTableViewControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TechLabTableViewControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DAEF7D1DB28FEC003128DD /* TechLabTableViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechLabTableViewControllerUITests.swift; sourceTree = "<group>"; };
 		E8DAEF7F1DB28FEC003128DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8DAEF8B1DB29022003128DD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E8DAEF8B1DB29022003128DD /* FeedDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FeedDetail.storyboard; sourceTree = "<group>"; };
 		E8DAEF8C1DB29022003128DD /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		E8DAEF8D1DB29022003128DD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E8DAEF8D1DB29022003128DD /* FeedDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				E8DAEF5D1DB28FEC003128DD /* AppDelegate.swift */,
-				E8DAEF8B1DB29022003128DD /* Main.storyboard */,
+				E8DAEF8B1DB29022003128DD /* FeedDetail.storyboard */,
 				E8DAEF8C1DB29022003128DD /* TableViewCell.swift */,
-				E8DAEF8D1DB29022003128DD /* ViewController.swift */,
+				E8DAEF8D1DB29022003128DD /* FeedDetailViewController.swift */,
 				E8DAEF641DB28FEC003128DD /* Assets.xcassets */,
 				E8DAEF661DB28FEC003128DD /* LaunchScreen.storyboard */,
 				E8DAEF691DB28FEC003128DD /* Info.plist */,
@@ -238,7 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8DAEF8E1DB29022003128DD /* Main.storyboard in Resources */,
+				E8DAEF8E1DB29022003128DD /* FeedDetail.storyboard in Resources */,
 				E8DAEF681DB28FEC003128DD /* LaunchScreen.storyboard in Resources */,
 				E8DAEF651DB28FEC003128DD /* Assets.xcassets in Resources */,
 			);
@@ -265,7 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8DAEF901DB29022003128DD /* ViewController.swift in Sources */,
+				E8DAEF901DB29022003128DD /* FeedDetailViewController.swift in Sources */,
 				E8DAEF5E1DB28FEC003128DD /* AppDelegate.swift in Sources */,
 				E8DAEF8F1DB29022003128DD /* TableViewCell.swift in Sources */,
 			);
@@ -510,6 +510,7 @@
 				E8DAEF841DB28FEC003128DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E8DAEF851DB28FEC003128DD /* Build configuration list for PBXNativeTarget "TechLabTableViewControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +519,7 @@
 				E8DAEF871DB28FEC003128DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E8DAEF881DB28FEC003128DD /* Build configuration list for PBXNativeTarget "TechLabTableViewControllerUITests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +528,7 @@
 				E8DAEF8A1DB28FEC003128DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
